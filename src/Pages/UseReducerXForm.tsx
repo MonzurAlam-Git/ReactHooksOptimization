@@ -2,6 +2,7 @@ import { useReducer } from "react";
 
 const UseReducerXForm = () => {
   const initialState = { name: "", email: "" };
+
   type Action = {
     type: string;
     payload: string;
@@ -19,8 +20,11 @@ const UseReducerXForm = () => {
       case "addEmail": {
         return { ...currentState, email: action.payload };
       }
+      default:
+        return currentState;
     }
   };
+
   const [state, dispatch] = useReducer(reducerFunction, initialState);
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ThemeContext } from "../Components/Context/ThemeProvider";
 
 const Forms = () => {
+  const { dark, setDark } = useContext(ThemeContext);
+  console.log("Dark mode in Forms Component =>", dark);
+
   //   To Provide multiple state, we can use an object as a state
   const [user, setUser] = useState({ name: "", email: "" });
 
@@ -38,6 +42,9 @@ const Forms = () => {
     <div>
       {/* Form  */}
       <h1 className="text-2xl m-5">Forms</h1>
+      <button onClick={() => setDark(!dark)} className="btn btn-primary m-5">
+        Toggle In Form Component
+      </button>
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
