@@ -4,6 +4,7 @@ const useContainer = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+
   const controller = new AbortController();
 
   const getUser = async () => {
@@ -21,7 +22,9 @@ const useContainer = () => {
   useEffect(() => {
     getUser();
   }, []);
+
   console.log(users);
+
   if (loading && !error) {
     <p>Loading</p>;
   }

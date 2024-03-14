@@ -1,5 +1,3 @@
-import React from "react";
-
 const UserLists = ({ users, loading, error }) => {
   return (
     <div>

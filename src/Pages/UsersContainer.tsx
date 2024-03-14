@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import UserLists from "./UserLists";
 import useContainer from "../Hooks/useContainer";
+import Select from "./Select";
 
 const UsersContainer = () => {
   const { users, loading, error } = useContainer();

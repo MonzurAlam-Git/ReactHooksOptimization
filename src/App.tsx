@@ -14,6 +14,8 @@ import Exp_2 from "./Pages/Exp_2";
 import UseAvatar from "./Pages/HigherOrderComponents/UseAvatar";
 import GameResults from "./Pages/HigherOrderComponents/GameResults";
 import UsersContainer from "./Pages/UsersContainer";
+import Select from "./Pages/Select";
+import SelectWork from "./SelectWork";
 
 function App() {
   return (
@@ -29,7 +31,8 @@ function App() {
       {/* <ThemeProvider></ThemeProvider> */}
       <Exp_2></Exp_2>
       {/* <GameResults></GameResults> */}
-      <UsersContainer></UsersContainer>
+      {/* <UsersContainer></UsersContainer> */}
+      <SelectWork></SelectWork>
     </div>
   );
 }
